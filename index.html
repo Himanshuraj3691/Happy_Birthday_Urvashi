@@ -261,20 +261,32 @@
 
       function showSecondPage() {
         document.querySelector('.card').classList.add('show-second-page');
+        party.confetti(document.querySelector('.second-page'), {
+          count: party.variation.range(20, 40),
+        });
       }
 
       function showThirdPage() {
         document.querySelector('.card').classList.remove('show-second-page');
         document.querySelector('.card').classList.add('show-third-page');
+        party.confetti(document.querySelector('.third-page'), {
+          count: party.variation.range(20, 40),
+        });
       }
 
       function goBack() {
         document.querySelector('.card').classList.remove('show-second-page');
+        party.confetti(document.querySelector('.inside'), {
+          count: party.variation.range(20, 40),
+        });
       }
 
       function goBackToSecondPage() {
         document.querySelector('.card').classList.remove('show-third-page');
         document.querySelector('.card').classList.add('show-second-page');
+        party.confetti(document.querySelector('.second-page'), {
+          count: party.variation.range(20, 40),
+        });
       }
     </script>
   </body>
